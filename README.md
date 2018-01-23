@@ -3,6 +3,7 @@ A project I made for high school hack, a 42 high school curriculum that teaches 
 
 
 Ft_Boardgame Concepts: (T2)
+
 NOTE: SUBJECTIVE TO CHANGES DUE, PROJECT MAYBE TOO DIFFICULT FOR HIGHSCHOOLERS LEARNING RUBY OR PYTHON
 
 Requirements:

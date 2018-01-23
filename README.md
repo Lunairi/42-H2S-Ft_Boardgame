@@ -7,7 +7,7 @@ Ft_Boardgame Concepts: (T2)
 NOTE: SUBJECTIVE TO CHANGES DUE, PROJECT MAYBE TOO DIFFICULT FOR HIGHSCHOOLERS LEARNING RUBY OR PYTHON
 
 Requirements:
-Stupid are expected to create a game container class that will 
+Stupdents are expected to create a game container class that will 
 run their boardgame. As with all OOP project you are expected to
 create the following:
 - 1) At least 4 powerup/game event cards for your boardgame. They must

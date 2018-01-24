@@ -11,8 +11,6 @@ Write a pdf with detail instructions on how to complete the project and what is 
 
 Ft_Boardgame Concepts: (T2)
 
-NOTE: SUBJECTIVE TO CHANGES DUE, PROJECT MAYBE TOO DIFFICULT FOR HIGHSCHOOLERS LEARNING RUBY OR PYTHON
-
 Requirements:
 Stupdents are expected to create a game container class that will 
 run their boardgame. As with all OOP project you are expected to

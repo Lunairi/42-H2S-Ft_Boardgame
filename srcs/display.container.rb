@@ -10,11 +10,13 @@
 #*         |___/ |___/|_|                                                     */
 #* ************************************************************************** */
 
+require_relative "modules.util"
+
 class Display
 	attr_accessor :tiles
 	attr_accessor :players
 
-	include Test
+	include Clear
 
 	def initialize
 		@tiles = []
@@ -27,12 +29,8 @@ class Display
 		@players << Player.new(nameput, symput)
 	end
 
-	def clear
-		system "clear"
-	end
-
 	def cardEvent
-		puts @players[@c].getName + " got a event card added to their hand"
+		puts "", @players[@c].getName + " got a event card added to their hand"
 	end
 
 	def delay(length)

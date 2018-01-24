@@ -1,6 +1,6 @@
 #* ************************************************************************** */
 #*                                                                            */
-#*    main.rb                _             _              :::      ::::::::   */
+#*    pointcard.class.rb     _             _              :::      ::::::::   */
 #*    By: mlu               | |           | |           :+:      :+:    :+:   */
 #*     ___  __ _  __ _ _ __ | | __ _ _ __ | |_        +:+ +:+         +:+     */
 #*    / _ \/ _` |/ _` | '_ \| |/ _` | '_ \| __|     +/+  +:+       +/+        */
@@ -10,15 +10,14 @@
 #*         |___/ |___/|_|                                                     */
 #* ************************************************************************** */
 
-require_relative "display.container"
-require_relative "tile.class"
-require_relative "forwardtile.class"
-require_relative "backwardtile.class"
-require_relative "eventtile.class"
-require_relative "string.util"
-require_relative "player.class"
-require_relative "card.class"
-require_relative "pointcard.class"
+class Point
 
-test = Display.new
-test.startGame
+	def intialize
+		super("Point Card")
+	end
+
+	def getName
+		return @name
+	end
+
+end

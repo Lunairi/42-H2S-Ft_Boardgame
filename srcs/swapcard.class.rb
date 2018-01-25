@@ -1,6 +1,6 @@
 #* ************************************************************************** */
 #*                                                                            */
-#*    card.class.rb          _             _              :::      ::::::::   */
+#*    swapcard.class.rb     _             _              :::      ::::::::   */
 #*    By: mlu               | |           | |           :+:      :+:    :+:   */
 #*     ___  __ _  __ _ _ __ | | __ _ _ __ | |_        +:+ +:+         +:+     */
 #*    / _ \/ _` |/ _` | '_ \| |/ _` | '_ \| __|     +/+  +:+       +/+        */
@@ -10,27 +10,17 @@
 #*         |___/ |___/|_|                                                     */
 #* ************************************************************************** */
 
-class Card
+require_relative "card.class"
 
-	def initialize(nameput)
-		@name = nameput
+class Swap < Card
+
+	def initialize
+		super("Swap Card")
+		puts "You received a swap card!"
 	end
 
 	def getName
 		return @name
 	end
-
-	def description
-		if @name == "Point Card"
-			puts ") " + @name + ": Gain one point using this card"
-		elsif @name == "Steal Card"
-			puts ") " + @name + ": Steal one point from another player"
-		elsif @name == "Speed Card"
-			puts ") " + @name + ": You get one point and immediately get to roll twice"
-		else
-			puts ") " + @name + ": Swap points with another player"
-		end
-	end
-
 
 end

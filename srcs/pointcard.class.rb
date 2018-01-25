@@ -10,10 +10,13 @@
 #*         |___/ |___/|_|                                                     */
 #* ************************************************************************** */
 
-class Point
+require_relative "card.class"
 
-	def intialize
+class Point < Card
+
+	def initialize
 		super("Point Card")
+		puts "You received a point card!"
 	end
 
 	def getName

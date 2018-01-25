@@ -10,7 +10,14 @@
 #*         |___/ |___/|_|                                                     */
 #* ************************************************************************** */
 
+require_relative "pointcard.class"
+require_relative "stealcard.class"
+require_relative "speedcard.class"
+require_relative "swapcard.class"
+require_relative "card.class"
+	
 class Player
+	attr_accessor :cards
 
 	def initialize(nameput, symput)
 		@score = 0
@@ -19,6 +26,44 @@ class Player
 		@y = 0
 		@name = nameput
 		@symbol = symput
+		@points = 0
+	end
+
+	def getCard
+		i = rand(4)
+		if i == 0
+			@cards << Point.new
+		elsif i == 1
+			@cards << Steal.new
+		elsif i == 2
+			@cards << Speed.new
+		else
+			@cards << Swap.new
+		end
+	end
+
+	def removeCard(i)
+		@cards.delete(@cards[i])
+	end
+
+	def checkPoints
+		puts @name + " currently has " + @points.to_s + " amount of points."
+	end
+
+	def setPoints(i)
+		@points = i
+	end
+
+	def subPoints(i)
+		@points -= i
+	end
+
+	def addPoints(i)
+		@points += i
+	end
+
+	def getPoints
+		return @points
 	end
 
 	def getName

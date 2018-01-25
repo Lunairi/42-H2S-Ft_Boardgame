@@ -19,6 +19,9 @@ require_relative "string.util"
 require_relative "player.class"
 require_relative "card.class"
 require_relative "pointcard.class"
+require_relative "stealcard.class"
+require_relative "swapcard.class"
+require_relative "speedcard.class"
 
 test = Display.new
 test.startGame

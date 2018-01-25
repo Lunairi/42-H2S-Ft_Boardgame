@@ -30,7 +30,8 @@ class Display
 	end
 
 	def cardEvent
-		puts "", @players[@c].getName + " got a event card added to their hand"
+		puts "", @players[@c].getName + " got a event card added to their hand!"
+		@players[@c].getCard
 	end
 
 	def delay(length)
@@ -82,8 +83,98 @@ class Display
 		gameLoop
 	end
 
+	def bonus
+		clear
+		refresh
+		puts @players[@c].getName + " rolls their bonus dice"
+		@players[@c].roll
+		delay(3)
+		clear
+		refresh
+		checkEvent
+		movePlayer
+	end
+
+	def winner
+		puts @players[@c].getName + " has won the game! Game will now exit in 10 seconds"
+		i = 0
+		while i < 10
+			puts "."
+			sleep 1
+			i += 1
+		end
+		exit
+	end
+
+	def cardEnd(i)
+		@players[@c].removeCard(i)
+		@players[@c].checkPoints
+		if (@players[@c].getPoints > 9)
+			winner
+		end
+	end
+
+	def initCard(nameput, i)
+		if nameput == "Point Card"
+			@players[@c].addPoints(1)
+			cardEnd(i)
+		elsif nameput == "Steal Card"
+			puts "Select a player to steal from (enter their ID number)"
+			listPlayer
+			print "> "
+			input = gets.chomp.to_i
+			if input == @c
+				puts "You cannot steal from yourself"
+			elsif @players[input].getPoints == 0
+				puts "You cannot steal from a player with no points"
+			else
+				@players[input].subPoints(1)
+				puts "You stole 1 point from " + @players[input].getName
+				@players[@c].addPoints(1)
+				cardEnd(i)
+			end
+		elsif nameput == "Speed Card"
+			puts "You get a point and get a bonus roll!"
+			@players[@c].addPoints(1)
+			cardEnd(i)
+			sleep 3
+			bonus
+		else
+			puts "Select a player to swap points with (enter their ID number)", "Enter your own number to cancel the swap"
+			listPlayer
+			print "> "
+			input = gets.chomp.to_i
+			if input == @c
+				puts "You cancelled swapping"
+			else
+				i = @players[@c].getPoints
+				@players[@c].setPoints(@players[input].getPoints)
+				@players[input].setPoints(i)
+				puts "You swapped points with " + @players[input].getName
+				cardEnd(i)
+			end
+		end
+	end
+
 	def playCard
-		puts "Coming soon"
+		i = 0
+		if @players[@c].cards.size > 0
+			puts "Please choose a card to play (use numeric value), type any invalid number to not play a card"
+			while i < @players[@c].cards.size 
+				print i
+				@players[@c].cards[i].description
+				i += 1
+			end
+			print "> "
+			input = gets.chomp.to_i
+			if input < @players[@c].cards.size
+				initCard(@players[@c].cards[input].getName, input)
+			else
+				puts "Card doesn't exist"
+			end
+		else
+			puts "You have no cards! Earn them by rolling the dice and landing on event tiles!"
+		end
 		menu
 	end
 
@@ -96,6 +187,8 @@ class Display
 			getSymbol(nameput)
 		else
 			@players << Player.new(nameput, symput)
+			i = @players.size - 1
+			@players[i].getCard
 			gameLoop
 		end
 	end
@@ -110,10 +203,9 @@ class Display
 	def listPlayer
 		i = 0
 		while (i < @players.size)
-			puts "Player: " + @players[i].getName + " || Board Piece: " + @players[i].getSymbol
+			puts "ID: " + i.to_s + " || Player: " + @players[i].getName + " || Board Piece: " + @players[i].getSymbol + " || Points " + @players[i].getPoints.to_s
 			i += 1
 		end
-		menu
 	end
 
 	def menu
@@ -134,6 +226,7 @@ class Display
 			addPlayer
 		elsif input.to_s == "4"
 			listPlayer
+			menu
 		elsif input.to_s == "5"
 			puts "Exiting boardgame"
 			exit

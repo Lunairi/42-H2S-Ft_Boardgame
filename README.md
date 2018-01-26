@@ -47,4 +47,3 @@ Additional players, additional events, bigger boardgame, additional mechanism, s
 Video Lessons:
 - 1) Class entities/containers and array of classes
 - 2) Extending class methods, Modules
-- 3) Encapsulation and polymorphism concepts

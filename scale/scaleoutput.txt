@@ -1,0 +1,52 @@
+lunairi@Arta:~/Downloads/Subjects/resources/scaleValidator$ ruby scale_validator.rb ft_boardgame.en.yml 
+Basic Object Oriented Class
+     Proper Container Implementation
+          Object-oriented programming: 50 => 50
+          Adaptation & creativity: 30 => 30
+          Rigor: 10 => 10
+          Organization: 30 => 30
+     Space/Tile Classes
+          Object-oriented programming: 15 => 65
+          Adaptation & creativity: 10 => 40
+          Rigor: 15 => 25
+          Organization: 10 => 40
+     Item/Card Tiles
+          Object-oriented programming: 15 => 80
+          Adaptation & creativity: 10 => 50
+          Rigor: 15 => 40
+          Organization: 10 => 50
+     Class Instance Deletion
+          Object-oriented programming: 20 => 100
+          Adaptation & creativity: 10 => 60
+          Rigor: 12 => 52
+          Organization: 10 => 60
+Running & Playing ft_boardgame
+     Visualizing the boardgame
+          Adaptation & creativity: 10 => 70
+          Rigor: 12 => 64
+          Organization: 10 => 70
+     Game mechanics
+          Adaptation & creativity: 10 => 80
+          Rigor: 12 => 76
+          Organization: 10 => 80
+     Interface & Menu
+          Adaptation & creativity: 10 => 90
+          Rigor: 12 => 88
+          Organization: 10 => 90
+     Error Handling
+          Adaptation & creativity: 10 => 100
+          Rigor: 12 => 100
+          Organization: 10 => 100
+Bonus
+     Module Use & Class Method Extension
+          Object-oriented programming: 15 => 15
+          Adaptation & creativity: 15 => 15
+          Rigor: 15 => 15
+          Organization: 15 => 15
+     Cool Bonuses
+          Object-oriented programming: 10 => 25
+          Adaptation & creativity: 10 => 25
+          Rigor: 10 => 25
+          Organization: 10 => 25
+
+all good: ft_boardgame.en.yml is now valid !

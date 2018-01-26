@@ -1,0 +1,262 @@
+# **************************************************************************** #
+#                                                                              #
+#               ft_boardgame.en.yml for FT_BOARDGAME                           #
+#               Made by : Michael Lu <mlu@student.42.fr>                       #
+#                                                                              #
+# **************************************************************************** #
+
+---
+
+name: ft_boardgame
+lg: en
+is_primary: true
+comment: ''
+
+introduction_md: |
+
+  To ensure this evaluation goes smoothly, please respect the following set
+  of rules :
+
+  - Please remain courteous, polite, respectful and constructive at all 
+    times during this exchange. The trust bond between the school's 
+    communauty and yourself depends on it.
+
+  - Should you notice any malfunctions within the submitted project, 
+    make sure you take the time to discuss those with the student (or 
+    group of students) being graded.
+
+  - Keep in mind that some subjects can be interpreted differently.
+    If you come accross a situation where the student you're grading 
+    has interpreted the subject differently than you, try and judge
+    fairly whether their interpretation is acceptable or not, and grade
+    them accordingly. Our peer-evaluation system can only work if you
+    both take it seriously.
+
+disclaimer_md: ''
+
+guidelines_md: |
+
+  - You may only evaluate whatever is in the GiT submission directory of 
+    the student you are grading.
+
+  - Make sure to check wether the GiT submission directory
+    belongs to the student (or group) you're grading, and that
+    it's the right project.
+
+  - Make sure no mischievous aliases have been used to trick you 
+    into correcting something that is not actually in the official
+    submitted directory.
+
+  - Any script created to make this evaluation session easier - whether
+    it was produced by you or the student being graded - must be  
+    checked rigorously in order to avoid bad surprises.
+
+  - If the student who is grading this project hasn't done the
+    project him/herself yet, he/she must read the whole topic 
+    before starting the evaluation session.
+
+  - Use the flags available to you on this scale in order to report
+    a submission directory that is empty, non-functional, that contains
+    a norm errors or a case of cheating, etc...
+    In this case, the evaluation session ends and the final grade is 0
+    (or -42, in case of cheating). However, unless the student has
+    cheated, we advise you to go through the project together in order 
+    for the two (or more) of you to identify the problems that may have 
+    led for this project to fail, and avoid repeating those mistakes for
+    future projects.
+
+correction_number: 5
+duration: 2
+
+sections:
+
+- name: Basic Object Oriented Class
+  position: 1
+  description: 'Implementing parent and children class'
+
+  questions:
+  - name: Proper Container Implementation
+    position: 1
+    guidelines: |
+      Did the user implement a container that held all of their classes?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 50
+      name: Object-oriented programming
+    - percentage: 30
+      name: Adaptation & creativity 
+    - percentage: 10
+      name: Rigor
+    - percentage: 30
+      name: Organization
+
+  - name: Space/Tile Classes
+    position: 2
+    guidelines: |
+      Is there at least three unique space/tile classes (+1 point for each one)? And do they properly inherit from the same parent (+2 points)?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 15
+      name: Object-oriented programming
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 15
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+  - name: Item/Card Tiles
+    position: 3
+    guidelines: |
+      Is there at least three unique item/card classes (+1 point for each one)? And do they properly inherit from the same parent (+2 points)?
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 15
+      name: Object-oriented programming
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 15
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+  - name: Class Instance Deletion
+    position: 4
+    guidelines: |
+      When card/item are used are they properly deleted?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 20
+      name: Object-oriented programming
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 12
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+
+- name: Running & Playing ft_boardgame
+  position: 2
+  description: Make sure to rigorously test and check their ft_boardgame, it should be exciting to play!
+
+  questions:
+
+  - name: Visualizing the boardgame
+    position: 1
+    guidelines: |
+
+      Is there some sort of GUI/Visual output for the boardgame?
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 12
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+  - name: Game mechanics
+    position: 2
+    guidelines: | 
+
+      Can two players play on the boardgame? And does it feel like a boardgame when you play it? This include but not limited to taking turns, having events, moving around the board, etc.
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 12
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+  - name: Interface & Menu
+    position: 3
+    guidelines: | 
+
+      Is there a menu present? You should be able to create a character (+1 point), use an item (+1 points), roll the dice (+1 points), and the menu should work without any errors (+2 points)
+
+    rating: multi
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 12
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+  - name: Error Handling
+    position: 4
+    guidelines: |
+
+     Try to make sure they handle as much errors as possible. Try and break their game!
+
+    rating: bool
+    kind: standard
+    questions_skills:
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 12
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+
+
+- name: Bonus
+  position: 3
+  description: 'Any additional bonus that enhances the project'
+
+
+  questions:
+
+  - name: Module Use & Class Method Extension
+    position: 1
+    guidelines: |
+
+      Did they implement any modules or class method extension? Each individual module/extension is one point
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 15
+      name: Object-oriented programming
+    - percentage: 15
+      name: Adaptation & creativity 
+    - percentage: 15
+      name: Rigor
+    - percentage: 15
+      name: Organization
+
+  - name: Cool Bonuses
+    position: 2
+    guidelines: |
+
+      Did they implement any cool bonuses?
+
+    rating: multi
+    kind: bonus
+    questions_skills:
+    - percentage: 10
+      name: Object-oriented programming
+    - percentage: 10
+      name: Adaptation & creativity 
+    - percentage: 10
+      name: Rigor
+    - percentage: 10
+      name: Organization
+
+

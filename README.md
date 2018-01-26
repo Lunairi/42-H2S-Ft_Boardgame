@@ -15,7 +15,7 @@ Requirements:
 Stupdents are expected to create a game container class that will 
 run their boardgame. As with all OOP project you are expected to
 create the following:
-- 1) At least 4 powerup/game event cards for your boardgame. They must
+- 1) At least 3 powerup/game event cards for your boardgame. They must
 all be children classes that inherits from the same parent class.
 - 2) Must support at least two players on the boardgame, and players
 can gain and have powerup/game event cards equipped to their player class.
@@ -26,20 +26,19 @@ will be used to allow players to roll a number and move on the board.
 - 5) You must design some sort of graphic output
 - 6) Players will be given an option to use a powerup/game event card that they
 received, or be able to just roll the dice and end their turn.
-- 7) Boardgame must have a minimum of 40 tiles and a win condition
-- 7a) Each tile of course is a children class that must inherit from the same parent class
 
 
 Project Detail:
 Students will be creating a simple boardgame! The gameplay and rules is up 
 to the student however there are some restrictions that must occur for the project
 to be considered valid.
-- 1) There must be 40 tiles with half of the tiles are some sort of event
-- 2) There must be a win condition
-- 3) You must allow at least two players to play
-- 4) You must implement powerup/game event cards that players can earn through playing
-- 5) Players will be given an option to use those cards or roll the dice
-- 6) Students will have the freedom to design any graphical output
+- 1) There must be minimum of 3 unique children for tile/space and card/item
+- 2) Proper children/parent class inheritance is required
+- 3) There must be a win condition
+- 4) You must allow at least two players to play
+- 5) You must implement powerup/game event cards that players can earn through playing
+- 6) Players will be given an option to use those cards or roll the dice
+- 7) Students will have the freedom to design any graphical output
 
 Bonus:
 Additional players, additional events, bigger boardgame, additional mechanism, sounds, etc.

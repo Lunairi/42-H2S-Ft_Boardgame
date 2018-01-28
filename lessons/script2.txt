@@ -1,0 +1,85 @@
+example2 script
+
+Hello everyone, welcome back to the next video where we will talk about something a bit different.
+
+The concept here is about methods and modules.
+
+As you know methods are defined inside classes/objects that performs an instruction of code.
+
+Because Ruby and Python has classes/objects integrated into the language you can simply use some method and magical stuff will happen
+
+Let's say you want to add color to your text output to your terminal, what would be the easiest way to do this?
+
+This is where method extension comes from. 
+
+In this example you can see I created a class String
+
+But wait, class String already is a thing!
+
+Correct! String is already an class/object with its own methods, but we can always add more to it.
+
+Here you can see I defined two methods, red and bg_cyan which will make the text red, or background cyan
+
+Here you can see I store "Hello World" into a string and first output it using only the extended red method, and later with both the red text and background method
+
+Let me show you it works
+
+<run and compile>
+
+There you go, simple and easy to see. 
+
+Why would you ever use class method extensions?
+
+Maybe you want to manipulate int a specific way in your boardgame, or manipulate strings
+
+Since they are all classes you can just define those classes and add additional methods
+
+Moving on, you can see here we have a module. 
+
+What's different is the syntax, and also you can use modules as a way to make methods usable anywhere
+
+Normally you can only use methods that are inside the class/object or inherited
+
+But what if you want a method that doesn't exist inside class/object to any unique class/object?
+
+That is where modules come in
+
+Here in this example I add two methods inside my module Clear
+
+It contains clear, which will clean the terminal and hello, which will put text Hello World to the terminal
+
+Here you can see I create a class Example, and in this class I include the module Clear
+
+Without this include you can't use the module's method since it won't be able to find it
+
+Here let me show you
+
+<uncomment and stuff, run and fail>
+
+As you can see it's not happy, but if we put this line back in it will work
+
+<uncomment and run>
+
+Great it works, and here you can see how I can call those methods using just example.clear and example.talk
+
+It's a really cool mechanic that will really help you with your project
+
+Those are all the new concepts I wanted to bring up, go out there and try them out, create your boardgame and be creative
+
+Before I sent you off as always let me demo a bit of the boardgame I wrote
+
+<run code>
+
+Here you can see a simple boardgame where each tile is represented by characters. 
+
+Here you can see where I am
+
+Each turn I can roll a dice, or play some kind of card
+
+I can even add players
+
+What you choose to do with your boardgame is up to you, you can pick any graphic visualizer for your boardgame
+
+<roll as both player to show boardgame>
+
+As always have fun with your project and good luck!

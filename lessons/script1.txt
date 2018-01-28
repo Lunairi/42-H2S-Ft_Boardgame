@@ -1,0 +1,37 @@
+example1 script
+
+Hello everyone, I see you guys are back to try more object oriented programming. 
+
+This time the focus will be improving your skills with what you already know.
+
+The main new focus this time is to really push the idea of organizing your classes and work, and to get you guys into that mindset we will be focusing on containers.
+
+A container is just a way to hold all of your classes, be able to access or delete classes as well.
+
+In this example you will notice it looks familiar, it is the same code we had from the ft_arena project.
+
+However there is some differences, you. may have noticed that the example code has changed. 
+
+Here in the example code we are still making 10 random childrens with random values, however this time the value of the children class will be equals to the iteration.
+
+This is so the example later makes sense.
+
+Here in the container you can see I added a deleteArray function, which will allow me to delete any of my class that I've created in my array.
+
+In this example I will delete the class that is currently being stored at index 2, 4 and 6. 
+
+After I will output all of those children before and after the deletion so you can see that I really did delete them.
+
+<run code>
+
+Here you can see the end result 2, 4 and 6 are gone. You can even see the array size has dropped to 7.
+
+You will find containers extremely helpful when you work on this project as it will allow you to organize your work.
+
+So for this project you will still be doing alot of inheritance and reinforcing those object oriented concepts from the previous ft_arena
+
+If you are stuck you should revisit those videos for more help. 
+
+Today's video main focus is just to show you how to manage some of your classes inside a container which is now required for this exercise.
+
+I wish you guys the best of luck, and make sure to have fun!
